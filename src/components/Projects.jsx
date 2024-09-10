@@ -19,6 +19,10 @@ const Projects = () => {
           <Link to="https://github.com/PAulAmIC79/ToDo-List-Project" onClick={handleLinkClick}>To-Do List using MERN Stack</Link>
         </li>
 
+        <li className='inline-flex text-white bg-gray-800 border-0 py-2 px-6 focus:outline-none rounded text-lg hover:underline'>
+          <Link to="https://github.com/PAulAmIC79/ttc-game" onClick={handleLinkClick}>Tic-Tac-Toe Game using React+Vite</Link>
+        </li>
+
       </ul>
     </div>
     </section>
