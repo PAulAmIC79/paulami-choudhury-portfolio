@@ -1,6 +1,7 @@
 import React from "react";
 import { HiArrowNarrowDown } from "react-icons/hi";
 import ResumeLink from "../ResumeLink";
+import CertificateLink from "../CertificateLink";
 
 export default function About() {
   return (
@@ -22,12 +23,19 @@ export default function About() {
               className="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-950 rounded text-lg">
               Work With Me
             </a>
-            <a
+            <a 
               href="/"
               className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
               <ResumeLink /><HiArrowNarrowDown className="h-12 lg:w-4 lg:h-7 ml-1" />
             </a>
           </div>
+          <div className="flex justify-items-start mt-5">
+          <a 
+              href="/"
+              className="inline-flex text-gray-400 bg-blue-950  border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
+              <CertificateLink />
+            </a>
+            </div>
         </div>
         <div className="w-80 lg:w-96 lg:mr-16">
           <img
