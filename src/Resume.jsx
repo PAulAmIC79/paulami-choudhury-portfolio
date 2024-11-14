@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ResumeLink() {
+function Resume() {
     return (
 <a href="paulami_choudhury_cv" target="_blank" rel="noreferrer" >
     View My CV
@@ -8,4 +8,4 @@ function ResumeLink() {
     );
 }
 
-export default ResumeLink;
+export default Resume;

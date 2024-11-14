@@ -1,6 +1,6 @@
 import React from "react";
 import { HiArrowNarrowDown } from "react-icons/hi";
-import ResumeLink from "../ResumeLink";
+import Resume from "../Resume";
 import Certificate from "../certificate";
 
 export default function About() {
@@ -26,7 +26,7 @@ export default function About() {
             <a 
               href="/"
               className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
-              <ResumeLink /><HiArrowNarrowDown className="h-12 lg:w-4 lg:h-7 ml-1" />
+              <Resume /><HiArrowNarrowDown className="h-12 lg:w-4 lg:h-7 ml-1" />
             </a>
           </div>
           <div className="flex justify-items-start mt-5">
