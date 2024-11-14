@@ -2,7 +2,7 @@ import React from 'react';
 
 function Resume() {
     return (
-<a href="paulami_choudhury_cv" target="_blank" rel="noreferrer" >
+<a href="paulami_choudhury_cv.pdf" target="_blank" rel="noreferrer" >
     View My CV
 </a>
     );
