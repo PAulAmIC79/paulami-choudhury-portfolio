@@ -2,8 +2,8 @@ import React from 'react';
 
 function ResumeLink() {
     return (
-<a href="paulami_choudhury_cv.pdf" target="_blank" rel="noreferrer" >
-    View My Resume
+<a href="paulami_choudhury_cv" target="_blank" rel="noreferrer" >
+    View My CV
 </a>
     );
 }
