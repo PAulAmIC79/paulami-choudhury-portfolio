@@ -22,7 +22,7 @@ export default function About() {
             <img
               className="relative object-cover object-center rounded-2xl shadow-2xl shadow-white/10 hover:shadow-white/20 transition-all duration-300"
               alt="hero"
-              src="pc-6.webp"
+              src="pc-8.webp"
             />
           </motion.div>
         </motion.div>
