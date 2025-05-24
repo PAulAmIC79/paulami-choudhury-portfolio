@@ -53,7 +53,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="scroll-mt-20">
+    <section id="contact" className="scroll-mt-20 md:mt-16">
       <div className="container px-4 sm:px-6 lg:px-8 py-10 sm:py-16 md:py-20 mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}

@@ -1,17 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaReact, FaWordpress } from 'react-icons/fa';
+import { SiExpress, SiMongodb, SiNextdotjs } from 'react-icons/si';
 
 const Skills = () => {
   const skills = [
-    { name: 'HTML', color: 'from-orange-500 to-orange-600' },
-    { name: 'CSS', color: 'from-blue-500 to-blue-600' },
-    { name: 'JavaScript', color: 'from-yellow-500 to-yellow-600' },
-    { name: 'ExpressJS', color: 'from-gray-600 to-gray-700' },
-    { name: 'MongoDB', color: 'from-green-500 to-green-600' },
-    { name: 'NodeJS', color: 'from-green-600 to-green-700' },
-    { name: 'NextJS', color: 'from-gray-800 to-gray-900' },
-    { name: 'ReactJS', color: 'from-blue-400 to-blue-500' },
-    { name: 'Wordpress', color: 'from-blue-600 to-blue-700' },
+    { name: 'HTML', color: 'from-orange-500 to-orange-600', icon: <FaHtml5 className="text-2xl" /> },
+    { name: 'CSS', color: 'from-blue-500 to-blue-600', icon: <FaCss3Alt className="text-2xl" /> },
+    { name: 'JavaScript', color: 'from-yellow-500 to-yellow-600', icon: <FaJs className="text-2xl" /> },
+    { name: 'ExpressJS', color: 'from-gray-600 to-gray-700', icon: <SiExpress className="text-2xl" /> },
+    { name: 'MongoDB', color: 'from-green-500 to-green-600', icon: <SiMongodb className="text-2xl" /> },
+    { name: 'NodeJS', color: 'from-green-600 to-green-700', icon: <FaNodeJs className="text-2xl" /> },
+    { name: 'NextJS', color: 'from-gray-600 to-gray-400', icon: <SiNextdotjs className="text-2xl" /> },
+    { name: 'ReactJS', color: 'from-blue-400 to-blue-500', icon: <FaReact className="text-2xl" /> },
+    { name: 'Wordpress', color: 'from-blue-600 to-blue-700', icon: <FaWordpress className="text-2xl" /> },
   ];
 
   const containerVariants = {
@@ -36,8 +38,8 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="scroll-mt-20">
-      <div className="container px-4 sm:px-6 lg:px-8 py-10 sm:py-16 md:py-20 mx-auto">
+    <section id="skills" className="scroll-mt-20 md:pr-52 md:pl-52">
+      <div className="container px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-20 mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -58,12 +60,19 @@ const Skills = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ 
+                scale: 1.05,
+                y: -5,
+                transition: { duration: 0.2 }
+              }}
               whileTap={{ scale: 0.95 }}
               className={`group relative overflow-hidden rounded-xl bg-gradient-to-br ${skill.color} p-0.5 transition-all duration-300 hover:shadow-lg hover:shadow-${skill.color.split('-')[1]}/25`}
             >
-              <div className="relative rounded-lg bg-gray-900 p-3 sm:p-4 text-center">
-                <span className="text-base sm:text-lg font-medium text-white">{skill.name}</span>
+              <div className="relative rounded-lg bg-gray-900 p-3 sm:p-4 text-center flex flex-col items-center gap-2 sm:gap-3">
+                <div className="text-white group-hover:scale-110 transition-transform duration-300 group-hover:text-${skill.color.split('-')[1]}-400">
+                  {skill.icon}
+                </div>
+                <span className="text-sm sm:text-base font-medium text-white group-hover:text-${skill.color.split('-')[1]}-400 transition-colors duration-300">{skill.name}</span>
               </div>
             </motion.div>
           ))}
