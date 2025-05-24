@@ -13,7 +13,7 @@ const Skills = () => {
     { name: 'NodeJS', color: 'from-green-600 to-green-700', icon: <FaNodeJs className="text-2xl" /> },
     { name: 'NextJS', color: 'from-gray-600 to-gray-400', icon: <SiNextdotjs className="text-2xl" /> },
     { name: 'ReactJS', color: 'from-blue-400 to-blue-500', icon: <FaReact className="text-2xl" /> },
-    { name: 'Wordpress', color: 'from-blue-600 to-blue-700', icon: <FaWordpress className="text-2xl" /> },
+    { name: 'WordPress', color: 'from-blue-600 to-blue-700', icon: <FaWordpress className="text-2xl" /> },
   ];
 
   const containerVariants = {

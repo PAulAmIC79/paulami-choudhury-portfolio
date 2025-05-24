@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaPhone } from 'react-icons/fa';
+import { HiArrowDown } from 'react-icons/hi';
 
 const Hero = () => {
   return (
@@ -27,18 +29,18 @@ const Hero = () => {
               Crafting Digital Experiences with Code & Creativity.
             </p>
             <p className="text-gray-200 lg:text-gray-400 text-lg opacity-100">
-              Full Stack Developer passionate about building beautiful and functional web applications.
+              Blending the flexibility of MERN with the versatility of WordPress to deliver scalable web solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-6">
               <a
                 href="paulami_choudhury_cv.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 text-center text-white"
+                className="px-6 py-3 text-lg md:w-52 border-white bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 text-center text-white"
               >
                 View My Resume
               </a>
-              <a href="#contact" className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 border border-white lg:border-purple-500 rounded-lg font-semibold hover:bg-white/10 lg:hover:bg-purple-500/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/20 lg:hover:shadow-purple-500/20 text-center text-white">
+              <a href="#contact" className="px-6 py-3 text-lg md:w-52 bg-gradient-to-r  from-blue-500 to-purple-500 border border-white lg:border-purple-500 rounded-lg font-semibold hover:bg-white/10 lg:hover:bg-purple-500/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/20 lg:hover:shadow-purple-500/20 text-center text-white">
                 Contact Me
               </a>
             </div>
