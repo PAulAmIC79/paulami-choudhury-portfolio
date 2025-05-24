@@ -36,7 +36,7 @@ const Hero = () => {
                 href="paulami_choudhury_cv.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 text-lg md:w-52 border-white bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 text-center text-white"
+                className="px-6 py-3 text-lg md:w-52 bg-gradient-to-r  from-purple-500 to-blue-500 border border-white lg:border-purple-500 rounded-lg font-semibold hover:bg-white/10 lg:hover:bg-purple-500/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/20 lg:hover:shadow-purple-500/20 text-center text-white"
               >
                 View My Resume
               </a>
