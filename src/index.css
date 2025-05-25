@@ -142,6 +142,18 @@ section {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  position: relative;
+}
+
+.typing-animation::after {
+  content: '';
+  position: absolute;
+  right: -3px;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #8b5cf6;
+  animation: blink 0.7s step-end infinite;
 }
 
 .animate-fade-in-up {

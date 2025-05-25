@@ -38,7 +38,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="scroll-mt-20 md:pr-52 md:pl-52">
+    <section id="skills" className="scroll-mt-20 MT-8 md:pr-52 md:pl-52">
       <div className="container px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-20 mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
@@ -66,13 +66,13 @@ const Skills = () => {
                 transition: { duration: 0.2 }
               }}
               whileTap={{ scale: 0.95 }}
-              className={`group relative overflow-hidden rounded-xl bg-gradient-to-br ${skill.color} p-0.5 transition-all duration-300 hover:shadow-lg hover:shadow-${skill.color.split('-')[1]}/25`}
+              className={`group relative overflow-hidden rounded-xl bg-gradient-to-br ${skill.color} p-0.5 transition-all duration-300 hover:shadow-lg hover:shadow-${skill.color.split('-')[1]}/25 hover:bg-gradient-to-br hover:from-${skill.color.split('-')[1]}-400 hover:to-${skill.color.split('-')[1]}-500`}
             >
-              <div className="relative rounded-lg bg-gray-900 p-3 sm:p-4 text-center flex flex-col items-center gap-2 sm:gap-3">
-                <div className="text-white group-hover:scale-110 transition-transform duration-300 group-hover:text-${skill.color.split('-')[1]}-400">
+              <div className="relative rounded-lg bg-gray-900 p-3 sm:p-4 text-center flex flex-col items-center gap-2 sm:gap-3 transition-all duration-300 group-hover:bg-opacity-90">
+                <div className={`text-white group-hover:scale-110 transition-transform duration-300 group-hover:text-${skill.color.split('-')[1]}-400`}>
                   {skill.icon}
                 </div>
-                <span className="text-sm sm:text-base font-medium text-white group-hover:text-${skill.color.split('-')[1]}-400 transition-colors duration-300">{skill.name}</span>
+                <span className={`text-sm sm:text-base font-medium text-white group-hover:text-${skill.color.split('-')[1]}-400 transition-colors duration-300`}>{skill.name}</span>
               </div>
             </motion.div>
           ))}
