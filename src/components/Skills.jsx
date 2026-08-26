@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaReact, FaWordpress } from 'react-icons/fa';
-import { SiExpress, SiMongodb, SiNextdotjs } from 'react-icons/si';
+import { SiExpress, SiMongodb, SiNextdotjs, SiPostgresql } from 'react-icons/si';
 
 const Skills = () => {
   const skills = [
@@ -10,11 +10,11 @@ const Skills = () => {
     { name: 'JavaScript', color: 'from-yellow-500 to-yellow-600', icon: <FaJs className="text-2xl" /> },
     { name: 'ExpressJS', color: 'from-gray-600 to-gray-700', icon: <SiExpress className="text-2xl" /> },
     { name: 'MongoDB', color: 'from-green-500 to-green-600', icon: <SiMongodb className="text-2xl" /> },
+    { name: 'PostgreSQL', color: 'from-blue-500 to-blue-600', icon: <SiPostgresql className="text-2xl" /> },
     { name: 'NodeJS', color: 'from-green-600 to-green-700', icon: <FaNodeJs className="text-2xl" /> },
     { name: 'NextJS', color: 'from-gray-600 to-gray-400', icon: <SiNextdotjs className="text-2xl" /> },
     { name: 'ReactJS', color: 'from-blue-400 to-blue-500', icon: <FaReact className="text-2xl" /> },
     { name: 'WordPress', color: 'from-blue-600 to-blue-700', icon: <FaWordpress className="text-2xl" /> },
-    { name: 'PostgreSQL', color: 'from-blue-200 to-blue-600', icon: <FaPostgresql className="text-2xl" /> },
   ];
 
   const containerVariants = {
