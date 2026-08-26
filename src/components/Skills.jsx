@@ -14,6 +14,7 @@ const Skills = () => {
     { name: 'NextJS', color: 'from-gray-600 to-gray-400', icon: <SiNextdotjs className="text-2xl" /> },
     { name: 'ReactJS', color: 'from-blue-400 to-blue-500', icon: <FaReact className="text-2xl" /> },
     { name: 'WordPress', color: 'from-blue-600 to-blue-700', icon: <FaWordpress className="text-2xl" /> },
+    { name: 'PostgreSQL', color: 'from-blue-200 to-blue-600', icon: <FaPostgresql className="text-2xl" /> },
   ];
 
   const containerVariants = {
