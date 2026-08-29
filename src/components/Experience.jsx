@@ -10,7 +10,7 @@ const Experience = () => {
       description: 'Develope and maintain company website and web applications'
     },
     {
-      company: 'Sisyphus Infotech (Former)',
+      company: 'Amrut Global Solutions Pvt. Ltd. (Former)',
       position: 'Frontend Developer',
       description: 'Designed and implemented user interfaces for various client projects'
     }

@@ -43,6 +43,14 @@ export default function Navbar() {
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-blue-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a 
+            href="#shopify-projects" 
+            className="text-gray-300 hover:text-white transition-all duration-300 relative group px-2 py-1 w-full md:w-auto text-center"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Shopify
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-500 to-emerald-600 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a 
             href="#projects" 
             className="text-gray-300 hover:text-white transition-all duration-300 relative group px-2 py-1 w-full md:w-auto text-center"
             onClick={() => setIsMenuOpen(false)}

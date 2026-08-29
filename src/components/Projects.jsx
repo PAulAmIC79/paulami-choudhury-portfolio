@@ -54,7 +54,7 @@ const Projects = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-6 sm:mb-8 md:mb-12"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">My Projects</h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">M.E.R.N. Projects</h1>
           <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full"></div>
         </motion.div>
         <motion.div 

@@ -4,6 +4,8 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
+import ShopifyDevelopment from "./components/ShopifyDevelopment";
+import ShopifyProjects from "./components/ShopifyProjects";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Last from "./components/Last";
@@ -18,6 +20,8 @@ export default function App() {
         <About />
         <Experience />
         <Skills />
+        <ShopifyDevelopment />
+        <ShopifyProjects />
         <Projects />
         <Contact />
         <Last />
