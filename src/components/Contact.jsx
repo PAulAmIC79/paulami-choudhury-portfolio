@@ -73,17 +73,17 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    {
+    /* {
       icon: <FaLinkedin className="w-6 h-6" />,
       title: "LinkedIn",
       link: "/"
-    },
+    }, */
     {
       icon: <FaGithub className="w-6 h-6" />,
       title: "GitHub",
-      link: "/"
-    },
-    {
+      link: "https://github.com/PAulAmIC79"
+    }
+    /* {
       icon: <FaInstagram className="w-6 h-6" />,
       title: "Instagram",
       link: "/"
@@ -92,7 +92,7 @@ const Contact = () => {
       icon: <FaFacebook className="w-6 h-6" />,
       title: "FaceBook",
       link: "/"
-    }
+    } */
   ];
 
   return (
@@ -140,7 +140,7 @@ const Contact = () => {
                 ))}
               </div>
               <div className="mt-8 pt-6 border-t border-gray-700">
-                <h4 className="text-lg md:text-2xl font-semibold text-white mb-4">Follow Me</h4>
+                <h4 className="text-lg md:text-2xl font-semibold text-white mb-4">Follow Me On Github </h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
                     <motion.a

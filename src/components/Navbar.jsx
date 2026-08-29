@@ -27,6 +27,14 @@ export default function Navbar() {
         </div>
         <nav className={`${isMenuOpen ? 'flex' : 'hidden'} md:flex flex-col md:flex-row w-full md:w-auto mt-4 md:mt-2 md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700/50 items-center text-base sm:text-lg lg:text-lg justify-center gap-4 md:gap-0`}>
           <a 
+            href="#experience" 
+            className="text-gray-300 hover:text-white transition-all duration-300 relative group px-2 py-1 w-full md:w-auto text-center"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Experience
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-blue-600 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a 
             href="#skills" 
             className="text-gray-300 hover:text-white transition-all duration-300 relative group px-2 py-1 w-full md:w-auto text-center"
             onClick={() => setIsMenuOpen(false)}

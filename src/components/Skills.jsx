@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaReact, FaWordpress } from 'react-icons/fa';
-import { SiExpress, SiMongodb, SiNextdotjs, SiPostgresql } from 'react-icons/si';
+import { SiExpress, SiMongodb, SiNextdotjs, SiPostgresql, SiShopify } from 'react-icons/si';
 
 const Skills = () => {
   const skills = [
@@ -15,6 +15,7 @@ const Skills = () => {
     { name: 'NextJS', color: 'from-gray-600 to-gray-400', icon: <SiNextdotjs className="text-2xl" /> },
     { name: 'ReactJS', color: 'from-blue-400 to-blue-500', icon: <FaReact className="text-2xl" /> },
     { name: 'WordPress', color: 'from-blue-600 to-blue-700', icon: <FaWordpress className="text-2xl" /> },
+    { name: 'Shopify', color: 'from-green-500 to-green-600', icon: <SiShopify className="text-2xl" /> },
   ];
 
   const containerVariants = {

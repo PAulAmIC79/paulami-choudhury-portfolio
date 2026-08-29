@@ -3,7 +3,7 @@ import React from 'react'
 const Certificate = () => {
   return (
     <a href="MERN_Certificate.pdf" target="_blank" rel="noreferrer" >
-   Certificate of Completion of Full Stack Web Development(M.E.R.N) with WordPress Course from Vidyastu
+   Certificate of Completion from Vidyastu
 </a>
 
   )

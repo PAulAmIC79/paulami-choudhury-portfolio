@@ -1,6 +1,7 @@
 import React from "react";
 import { HiArrowNarrowDown } from "react-icons/hi";
 import Certificate from "../certificate";
+import UdemyCertificate from "../udemyCertificate";
 import { motion } from "framer-motion";
 
 export default function About() {
@@ -11,7 +12,7 @@ export default function About() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="lg:max-w-lg lg:w-full md:w-1/2 w-4/5 sm:w-5/6 mb-8 md:mb-0"
+          className="lg:max-w-lg lg:w-full md:w-1/2 w-4/5 sm:w-5/6 mb-8 md:mb-0 flex items-center justify-center"
         >
           <motion.div
             whileHover={{ scale: 1.03 }}
@@ -55,7 +56,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-4 sm:mt-6"
+            className="flex flex-nowrap justify-center gap-4 sm:gap-6 mt-4 sm:mt-6"
           >
             <motion.a 
               whileHover={{ scale: 1.05, y: -2 }}
@@ -64,6 +65,14 @@ export default function About() {
               className="inline-flex items-center text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 py-3 sm:py-4 px-6 sm:px-8 focus:outline-none rounded-full text-base sm:text-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25"
             >
               <Certificate />
+            </motion.a>
+            <motion.a 
+              whileHover={{ scale: 1.05, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              href="/"
+              className="inline-flex items-center text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 py-3 sm:py-4 px-6 sm:px-8 focus:outline-none rounded-full text-base sm:text-lg transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25"
+            >
+              <UdemyCertificate />
             </motion.a>
           </motion.div>
         </motion.div>

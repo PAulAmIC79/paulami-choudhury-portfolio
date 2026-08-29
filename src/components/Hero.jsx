@@ -29,7 +29,7 @@ const Hero = () => {
               Crafting Digital Experiences with Code & Creativity.
             </p>
             <p className="text-gray-200 lg:text-gray-400 text-lg opacity-100">
-              Blending the flexibility of MERN with the versatility of WordPress to deliver scalable web solutions.
+              Blending the flexibility of MERN with the versatility of WordPress & Shopify to deliver scalable web solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-6">
               <a
