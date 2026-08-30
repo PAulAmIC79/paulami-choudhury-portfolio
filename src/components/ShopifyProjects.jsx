@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaLink, FaChevronRight } from 'react-icons/fa';
+import { FaChevronRight } from 'react-icons/fa';
 import { SiShopify } from 'react-icons/si';
+import ShopifyProjectCard from './ShopifyProjectCard';
 
 const ShopifyProjects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -73,8 +74,41 @@ const ShopifyProjects = () => {
         { step: 'CHOOSE', description: 'Find products based on lifestyle, occasion or personal preference.' },
         { step: 'PURCHASE', description: 'Move naturally from product discovery to shopping.' }
       ]
+    },
+    {
+      id: 3,
+      type: 'Shopify Concept · Bakery & Cafe · Frisco, TX',
+      badge: 'CONCEPT DEMO',
+      badgeColor: 'from-gray-500 to-gray-600',
+      title: 'La Creme Bakery Cafe',
+      description: 'A Shopify concept built on the Pesto (Cakelet) theme to show how far a client\'s chosen theme can be pushed with custom development — a personalized \'what are you celebrating\' discovery flow, an interactive custom cake builder, and an editorial product showcase. This is a capability demo, not the final design being pitched to the client — the final build for this project will be scoped and designed separately.',
+      image: '/la-creme-concept.png',
+      role: 'Shopify Developer (Concept)',
+      scope: 'Theme Customization · Custom Sections · Custom Cake Builder UX · Personalized Discovery',
+      capabilities: ['Shopify Development', 'Theme Customization', 'Custom Sections', 'Cart & Checkout UX'],
+      highlights: [],
+      status: 'Self-directed concept build',
+      website: 'https://la-creme-concept.vercel.app'
+    },
+    {
+      id: 4,
+      type: 'Web Design Concept · Interior Architecture · Dallas, TX',
+      badge: 'CONCEPT DEMO',
+      badgeColor: 'from-gray-500 to-gray-600',
+      title: 'Atelier No. 7',
+      description: 'An editorial, image-forward concept site for a boutique interior architecture and design studio — built around a single narrative arc from first impression to project inquiry.',
+      image: '/atelier-no-7-concept.png',
+      role: 'Web Designer & Developer (Concept)',
+      scope: 'Editorial Design · Custom Interactions · Responsive Development',
+      capabilities: ['Custom Design', 'Responsive Development', 'Interaction Design'],
+      highlights: [],
+      status: 'Self-directed concept build',
+      website: 'https://atelier-no-7-delta.vercel.app'
     }
   ];
+
+  const showcaseProjects = projects.slice(0, 2);
+  const conceptProjects = projects.slice(2);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -124,115 +158,34 @@ const ShopifyProjects = () => {
           viewport={{ once: true }}
           className="grid grid-cols-1 gap-6 sm:gap-8"
         >
-          {projects.map((project) => (
-            <motion.div
-              key={project.id}
-              variants={itemVariants}
-              whileHover={{ 
-                scale: 1.02,
-                transition: { duration: 0.2 }
-              }}
-              onClick={() => setSelectedProject(project.id)}
-              className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-green-500/20 cursor-pointer"
-            >
-              {/* Background gradient */}
-              <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          {showcaseProjects.map((project) => (
+            <ShopifyProjectCard key={project.id} project={project} itemVariants={itemVariants} onSelect={setSelectedProject} />
+          ))}
+        </motion.div>
 
-              {/* Project Card Content */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 p-6 sm:p-8 relative z-10">
-                
-                {/* Image Section */}
-                <div className="md:col-span-1 flex items-center justify-center">
-                  <div className="relative w-full h-48 sm:h-56 md:h-64 rounded-xl overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                  </div>
-                </div>
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center mt-16 sm:mt-20 md:mt-24 mb-8 sm:mb-12 md:mb-16"
+        >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">Concept Demos</h2>
+          <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-gray-500 to-gray-600 mx-auto rounded-full"></div>
+          <p className="text-gray-300 text-base sm:text-lg mt-6 max-w-3xl mx-auto">
+            Self-directed concept builds — full creative and technical control, used to show what&apos;s possible beyond a client brief.
+          </p>
+        </motion.div>
 
-                {/* Content Section */}
-                <div className="md:col-span-2 flex flex-col justify-between">
-                  
-                  {/* Header with Badge */}
-                  <div>
-                    <div className="flex items-center gap-3 mb-3 flex-wrap">
-                      <span className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold bg-gradient-to-r ${project.badgeColor} text-white`}>
-                        <SiShopify className="w-3 h-3 sm:w-4 sm:h-4" />
-                        {project.badge}
-                      </span>
-                      <span className="text-xs sm:text-sm text-gray-400">{project.type}</span>
-                    </div>
-
-                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-300">
-                      {project.title}
-                    </h3>
-
-                    <p className="text-gray-300 text-sm sm:text-base mb-4 leading-relaxed">
-                      {project.description}
-                    </p>
-                  </div>
-
-                  {/* Project Details */}
-                  <div className="space-y-4 sm:space-y-6">
-                    
-                    {/* Role & Scope */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div>
-                        <p className="text-xs uppercase text-green-400 font-semibold tracking-wide mb-1">Role</p>
-                        <p className="text-gray-300 text-sm">{project.role}</p>
-                      </div>
-                      <div>
-                        <p className="text-xs uppercase text-green-400 font-semibold tracking-wide mb-1">Scope</p>
-                        <p className="text-gray-300 text-sm">{project.scope}</p>
-                      </div>
-                    </div>
-
-                    {/* Capabilities Tags */}
-                    <div>
-                      <p className="text-xs uppercase text-green-400 font-semibold tracking-wide mb-2">Capabilities</p>
-                      <div className="flex flex-wrap gap-2">
-                        {project.capabilities.slice(0, 4).map((cap, idx) => (
-                          <span key={idx} className="text-xs bg-green-500/10 text-green-300 px-2.5 py-1 rounded-full border border-green-500/20 hover:bg-green-500/20 transition-colors duration-300">
-                            {cap}
-                          </span>
-                        ))}
-                        {project.capabilities.length > 4 && (
-                          <span className="text-xs bg-green-500/10 text-green-300 px-2.5 py-1 rounded-full border border-green-500/20">
-                            +{project.capabilities.length - 4} more
-                          </span>
-                        )}
-                      </div>
-                    </div>
-
-                    {/* CTA Button */}
-                    <div className="flex justify-end pt-2">
-                      {project.website ? (
-                        <a
-                          href={project.website}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors duration-300 font-semibold text-sm sm:text-base"
-                        >
-                          Visit Website →
-                        </a>
-                      ) : (
-                        <motion.button
-                          whileHover={{ x: 5 }}
-                          className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors duration-300 font-semibold text-sm sm:text-base"
-                        >
-                          View Project Details
-                          <FaChevronRight className="w-4 h-4" />
-                        </motion.button>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 gap-6 sm:gap-8"
+        >
+          {conceptProjects.map((project) => (
+            <ShopifyProjectCard key={project.id} project={project} itemVariants={itemVariants} onSelect={setSelectedProject} />
           ))}
         </motion.div>
 
