@@ -14,7 +14,7 @@ const ShopifyProjects = () => {
       badgeColor: 'from-green-500 to-emerald-600',
       title: 'The Indian Bhakti Box',
       description: 'A Shopify e-commerce storefront for a Mumbai-based startup bringing thoughtfully curated Indian spiritual and cultural products into modern homes. Working as the Shopify Developer, I’m developing and customizing the storefront with a focus on the brand experience, product discovery, responsive design and the overall customer journey — from discovering the brand and exploring collections to finding products and making a purchase. The store is currently in development ahead of its planned September 2026 launch.',
-      image: 'puja-kit.webp',
+      image: 'indianbhaktibox.png',
       role: 'Shopify Developer',
       scope: 'Shopify Development · Theme Customization · Custom Sections · Responsive Development · Customer Journey',
       capabilities: [
