@@ -9,11 +9,11 @@ const ShopifyProjects = () => {
   const projects = [
     {
       id: 1,
-      type: 'Ongoing Project',
+      type: 'Shopify E-commerce · Mumbai',
       badge: 'ONGOING PROJECT',
       badgeColor: 'from-green-500 to-emerald-600',
       title: 'The Indian Bhakti Box',
-      description: 'A Shopify e-commerce storefront for a Mumbai-based startup bringing thoughtfully curated Indian spiritual and cultural products into modern homes. Working as the Shopify Developer, I’m developing and customizing the storefront with a focus on the brand experience, product discovery, responsive design and the overall customer journey — from discovering the brand and exploring collections to finding products and making a purchase. The store is currently in development ahead of its planned September 2026 launch.',
+      description: 'A Shopify e-commerce storefront for a Mumbai-based startup bringing thoughtfully curated Indian spiritual and cultural products into modern homes. Working as the Shopify Developer, I\'m developing and customizing the storefront with a focus on the brand experience, product discovery, responsive design and the overall customer journey — from discovering the brand and exploring collections to finding products and making a purchase. The store is currently in development ahead of its planned September 2026 launch.',
       image: 'indianbhaktibox.png',
       role: 'Shopify Developer',
       scope: 'Shopify Development · Theme Customization · Custom Sections · Responsive Development · Customer Journey',
@@ -43,62 +43,36 @@ const ShopifyProjects = () => {
     },
     {
       id: 2,
-      type: 'Concept Project',
-      badge: 'SELF-INITIATED',
-      badgeColor: 'from-purple-500 to-pink-600',
-      title: 'IndoWest Fashion - Premium Indo-Western Wear',
-      description: 'A self-initiated Shopify concept for a contemporary Indo-Western clothing brand, designed to demonstrate premium brand positioning, editorial visual direction, and sophisticated product discovery.',
-      image: 'pc-2.webp',
-      role: 'Shopify Designer & Developer',
-      scope: 'Brand story, product curation, collection strategy, customer journey design',
-      capabilities: [
-        'Brand Identity Design',
-        'Editorial Visual Direction',
-        'Collection Browsing & Filtering',
-        'Product Variants (Size, Color)',
-        'Size Selection Guide',
-        'Mobile Experience Design',
-        'Pickup & Delivery Journey'
-      ],
-      highlights: [
-        'Translating brand heritage into contemporary digital experience',
-        'Building curated collections for different occasions',
-        'Implementing sophisticated size/color variant selection',
-        'Designing pickup and delivery fulfillment journey',
-        'Creating mobile-first shopping experience',
-        'Premium product imagery & storytelling'
-      ],
-      status: 'Design & Development Concept'
-    },
-    {
-      id: 3,
-      type: 'Concept Project',
-      badge: 'SELF-INITIATED',
+      type: 'Shopify E-commerce · Chocolate & Wellness',
+      badge: 'COMPLETED PROJECT',
       badgeColor: 'from-blue-500 to-cyan-600',
-      title: 'FitPulse - Health & Fitness Accessories',
-      description: 'A second self-initiated Shopify concept for a modern health & fitness accessories brand, designed to demonstrate product-focused UX and conversion-oriented e-commerce thinking.',
-      image: 'pc-5.webp',
-      role: 'Shopify Developer & UX Strategist',
-      scope: 'Product discovery, categorization, filtering, recommendations, cross-selling',
+      title: 'Nirvritti Chocolates',
+      description: 'Nirvritti Chocolates is a Mumbai-based chocolate brand built around the idea that chocolate can be thoughtfully crafted for modern lifestyles. The website experience brings this healthy, natural positioning into the customer journey — helping visitors discover chocolates by lifestyle and occasion while communicating the ingredients, craftsmanship and product qualities behind the brand. The experience moves customers from discovering the brand and its philosophy to exploring product ranges, understanding what makes the chocolates different and choosing products based on their needs.',
+      image: 'pc-1.webp',
+      role: 'Shopify Developer',
+      scope: 'Shopify Development · E-commerce UX · Theme Customization · Responsive Development · Customer Journey',
       capabilities: [
-        'Smart Product Categorization',
-        'Advanced Collection Filtering',
-        'Product Comparison Tools',
-        'Product Education Content',
-        'Recommendation Engine',
-        'Bundle Creation & Cross-selling',
-        'Sticky Add-to-Cart'
+        'Shopify Development',
+        'E-commerce UX',
+        'Theme Customization',
+        'Responsive Development',
+        'Customer Journey'
       ],
       highlights: [
-        'Building intuitive product categorization for quick discovery',
-        'Implementing advanced filtering for product refinement',
-        'Creating product comparison functionality',
-        'Designing educational product specifications',
-        'Building recommendation algorithms',
-        'Implementing product bundles & cross-sell strategies',
-        'Optimizing mobile checkout flow'
+        'Communicating a natural, wellness-oriented positioning — natural ingredients, handmade small-batch production, no preservatives, no artificial flavour, no palm oil',
+        'Presenting the FIT-ROOT range through different needs and occasions such as Energy, Love, Kids and Care',
+        'Building a self-select journey so customers can browse by what they\'re looking for rather than a single catalog view',
+        'Designing a responsive storefront that works across desktop, tablet and mobile'
       ],
-      status: 'Design & Development Concept'
+      status: 'Completed — live and shipping',
+      website: 'https://nirvrittichocolates.store/',
+      customerJourney: [
+        { step: 'DISCOVER', description: 'Understand Nirvritti\'s natural and wellness-oriented approach to chocolate.' },
+        { step: 'EXPLORE', description: 'Discover the FIT-ROOT range through different needs and occasions such as Energy, Love, Kids and Care.' },
+        { step: 'UNDERSTAND', description: 'Learn about the ingredients, craftsmanship and product qualities before making a purchase.' },
+        { step: 'CHOOSE', description: 'Find products based on lifestyle, occasion or personal preference.' },
+        { step: 'PURCHASE', description: 'Move naturally from product discovery to shopping.' }
+      ]
     }
   ];
 
@@ -138,7 +112,7 @@ const ShopifyProjects = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">Shopify Project Showcase</h1>
           <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-600 mx-auto rounded-full"></div>
           <p className="text-gray-300 text-base sm:text-lg mt-6 max-w-3xl mx-auto">
-            A mix of one real ongoing Shopify project and two self-initiated concept stores demonstrating range across client work, brand storytelling and product-driven e-commerce experiences.
+            Real Shopify e-commerce work — from an ongoing brand launch to a completed store for a Mumbai-based chocolate brand — each shaped around the full customer journey from discovery to purchase.
           </p>
         </motion.div>
 
@@ -235,7 +209,7 @@ const ShopifyProjects = () => {
 
                     {/* CTA Button */}
                     <div className="flex justify-end pt-2">
-                      {project.id === 1 ? (
+                      {project.website ? (
                         <a
                           href={project.website}
                           target="_blank"
