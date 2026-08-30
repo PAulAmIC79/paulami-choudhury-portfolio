@@ -43,8 +43,13 @@ const Hero = () => {
               <a href="#skills" className="px-6 py-3 text-lg md:w-52 bg-gradient-to-r  from-blue-500 to-purple-500 border border-white lg:border-purple-500 rounded-lg font-semibold hover:bg-white/10 lg:hover:bg-purple-500/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/20 lg:hover:shadow-purple-500/20 text-center text-white">
                 My Skills
               </a>
-              <a href="#contact" className="px-6 py-3 text-lg md:w-52 bg-gradient-to-r  from-blue-500 to-purple-500 border border-white lg:border-purple-500 rounded-lg font-semibold hover:bg-white/10 lg:hover:bg-purple-500/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/20 lg:hover:shadow-purple-500/20 text-center text-white">
-                Contact Me
+              <a
+                href="https://www.linkedin.com/in/paulami-choudhury-5264751b9/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 text-lg md:w-52 bg-gradient-to-r  from-blue-500 to-purple-500 border border-white lg:border-purple-500 rounded-lg font-semibold hover:bg-white/10 lg:hover:bg-purple-500/10 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/20 lg:hover:shadow-purple-500/20 text-center text-white"
+              >
+                LinkedIn Profile →
               </a>
             </div>
           </div>

@@ -10,30 +10,36 @@ const ShopifyProjects = () => {
     {
       id: 1,
       type: 'Ongoing Project',
-      badge: 'ACTIVE DEVELOPMENT',
+      badge: 'ONGOING PROJECT',
       badgeColor: 'from-green-500 to-emerald-600',
-      title: 'Premium E-commerce Store Development',
-      description: 'An ongoing Shopify development project focused on translating a premium brand identity into a seamless e-commerce experience across key customer touchpoints.',
-      image: 'pc-3.webp',
-      role: 'Full-stack Shopify Developer',
-      scope: 'Store setup, theme customization, custom sections, checkout optimization',
+      title: 'The Indian Bhakti Box',
+      description: 'A Shopify e-commerce storefront for a Mumbai-based startup bringing thoughtfully curated Indian spiritual and cultural products into modern homes. Working as the Shopify Developer, I’m developing and customizing the storefront with a focus on the brand experience, product discovery, responsive design and the overall customer journey — from discovering the brand and exploring collections to finding products and making a purchase. The store is currently in development ahead of its planned September 2026 launch.',
+      image: 'puja-kit.webp',
+      role: 'Shopify Developer',
+      scope: 'Shopify Development · Theme Customization · Custom Sections · Responsive Development · Customer Journey',
       capabilities: [
-        'Shopify Store Configuration',
-        'Responsive Theme Development',
-        'Custom Liquid Components',
-        'Product & Collection Setup',
-        'Cart & Checkout Customization',
-        'Mobile Optimization',
-        'UX/CX Implementation'
+        'Shopify Development',
+        'Theme Customization',
+        'Custom Sections',
+        'Responsive Development',
+        'Customer Journey'
       ],
       highlights: [
-        'Developing custom Shopify theme from premium design specifications',
-        'Building reusable Liquid components for product discovery',
-        'Optimizing responsive design for mobile-first shopping',
-        'Implementing seamless checkout experience',
-        'Integrating third-party apps for enhanced functionality'
+        'Building a Shopify storefront for a Mumbai-based startup preparing for launch in September 2026',
+        'Customizing the storefront to support brand discovery, collection exploration and product understanding',
+        'Developing responsive storefront experiences that work across desktop, tablet and mobile',
+        'Shaping the customer journey from brand discovery through product consideration and purchase',
+        'Creating a clean, conversion-aware shopping experience aligned with the brand purpose and customer needs'
       ],
-      status: 'In Active Development'
+      status: 'Currently in development ahead of September 2026 launch',
+      website: 'https://www.theindianbhaktibox.com/',
+      customerJourney: [
+        { step: 'DISCOVER', description: 'Understand the brand and its purpose.' },
+        { step: 'EXPLORE', description: 'Discover products through categories, festivals and intentions.' },
+        { step: 'CONSIDER', description: 'Learn about products and their meaning before purchasing.' },
+        { step: 'PURCHASE', description: 'Move naturally from product discovery toward purchase.' },
+        { step: 'RETURN', description: 'Create opportunities for customers to reconnect with the brand through stories, festivals and new products.' }
+      ]
     },
     {
       id: 2,
@@ -132,7 +138,7 @@ const ShopifyProjects = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4">Shopify Project Showcase</h1>
           <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-600 mx-auto rounded-full"></div>
           <p className="text-gray-300 text-base sm:text-lg mt-6 max-w-3xl mx-auto">
-            Three distinct Shopify projects demonstrating range across ongoing development, fashion e-commerce, and product-focused customer journeys.
+            A mix of one real ongoing Shopify project and two self-initiated concept stores demonstrating range across client work, brand storytelling and product-driven e-commerce experiences.
           </p>
         </motion.div>
 
@@ -229,13 +235,25 @@ const ShopifyProjects = () => {
 
                     {/* CTA Button */}
                     <div className="flex justify-end pt-2">
-                      <motion.button
-                        whileHover={{ x: 5 }}
-                        className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors duration-300 font-semibold text-sm sm:text-base"
-                      >
-                        View Project Details
-                        <FaChevronRight className="w-4 h-4" />
-                      </motion.button>
+                      {project.id === 1 ? (
+                        <a
+                          href={project.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors duration-300 font-semibold text-sm sm:text-base"
+                        >
+                          Visit Website →
+                        </a>
+                      ) : (
+                        <motion.button
+                          whileHover={{ x: 5 }}
+                          className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors duration-300 font-semibold text-sm sm:text-base"
+                        >
+                          View Project Details
+                          <FaChevronRight className="w-4 h-4" />
+                        </motion.button>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -335,11 +353,37 @@ const ShopifyProjects = () => {
                             </div>
                           </div>
 
+                          {/* Customer Journey */}
+                          {project.customerJourney && (
+                            <div className="mb-8">
+                              <h3 className="text-lg font-bold text-green-400 mb-4 uppercase tracking-wide">Customer Journey</h3>
+                              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                                {project.customerJourney.map((item) => (
+                                  <div key={item.step} className="p-3 rounded-lg border border-gray-700 bg-gray-800/60">
+                                    <p className="text-xs uppercase text-green-400 font-semibold tracking-wide mb-2">{item.step}</p>
+                                    <p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+
                           {/* Status */}
-                          <div className="p-4 sm:p-6 rounded-xl bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/20">
+                          <div className="p-4 sm:p-6 rounded-xl bg-gradient-to-r from-green-900/20 to-emerald-900/20 border border-green-500/20 mb-6">
                             <p className="text-xs uppercase text-green-400 font-semibold tracking-wide mb-2">Project Status</p>
                             <p className="text-gray-300 text-base sm:text-lg font-semibold">{project.status}</p>
                           </div>
+
+                          {project.website && (
+                            <a
+                              href={project.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold hover:opacity-90 transition-opacity duration-300"
+                            >
+                              Visit Website →
+                            </a>
+                          )}
                         </div>
                       );
                     })()}
