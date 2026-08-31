@@ -70,7 +70,7 @@ const apps = [
     problem: 'Agency projects were run across email threads, spreadsheets and calls, leaving clients guessing at status',
     built: 'A dual-role (admin/client) system covering milestones, services, payment history, client-visible updates, requirements, meetings, deliverables, documents and role-gated authentication',
     tech: ['Next.js 16', 'Prisma', 'PostgreSQL / Supabase', 'NextAuth v5'],
-    cta: null,
+    cta: { label: 'View Case Study', href: '/case-studies/sumukhai-client-portal.html' },
     note: 'Internally used by SumukhAI for client operations and reporting',
   },
   {
