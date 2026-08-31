@@ -7,7 +7,7 @@ import Skills from "./components/Skills";
 import ShopifyDevelopment from "./components/ShopifyDevelopment";
 import ShopifyProjects from "./components/ShopifyProjects";
 import WebApplications from "./components/WebApplications";
-import Projects from "./components/Projects";
+//import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Last from "./components/Last";
 import BackgroundWrapper from "./components/BackgroundWrapper";
@@ -20,11 +20,12 @@ export default function App() {
       <BackgroundWrapper>
         <About />
         <Experience />
+        <Skills />
         <ShopifyDevelopment />
         <ShopifyProjects />
         <WebApplications />
-        <Projects />
-        <Skills />
+        {/* <Projects /> */}
+        
         <Contact />
         <Last />
       </BackgroundWrapper>

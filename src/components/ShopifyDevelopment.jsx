@@ -70,7 +70,7 @@ const ShopifyDevelopment = () => {
   };
 
   return (
-    <section className="scroll-mt-20 mt-10 md:mt-16 md:pr-52 md:pl-52">
+    <section id="shopify-development" className="scroll-mt-20 mt-10 md:mt-16 md:pr-52 md:pl-52">
       <div className="container px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-20 mx-auto">
         
         {/* Header */}
